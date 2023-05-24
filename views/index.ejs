@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container1">
+    <header class="header">
+      <h1 id="title" class="text-center">
+        Survey Form
+      </h1>
+    </header>
+
+    <p id="description" class="description text-center">
+      Thank you for taking time to help us improve the platform.
+    </p>
+
+    <form id="survey-form" method="POST" action="/">
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="Name" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="Email" id="email" class="form-control" placeholder="Enter your Email" required />
+      </div>
+
+      <div class="form-group">
+        <label id="number-label" for="number"> Age </label>
+        <input type="number" name="Age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+      </div>
+
+      <h2>1:How satisfied are you with our products?</h2>
+      <div class="container2">
+        <div class="star">
+          <input type="radio" name="Question1" id="rate1-5"value="Rate 5">
+          <label for="rate1-5" class="fas fa-star"></label>
+          <input type="radio" name="Question1" id="rate1-4"value="Rate 4">
+          <label for="rate1-4" class="fas fa-star"></label>
+          <input type="radio" name="Question1" id="rate1-3"value="Rate 3">
+          <label for="rate1-3" class="fas fa-star"></label>
+          <input type="radio" name="Question1" id="rate1-2"value="Rate 2">
+          <label for="rate1-2" class="fas fa-star"></label>
+          <input type="radio" name="Question1" id="rate1-1"value="Rate 1">
+          <label for="rate1-1" class="fas fa-star"></label>
+        </div>
+      </div>
+
+
+      <h2>2:How fair are the prices compared to similar retailers?</h2>
+      <div class="container2">
+        <div class="star">
+          <input type="radio" name="Question2" id="rate2-5"value="Rate 5">
+          <label for="rate2-5" class="fas fa-star"></label>
+          <input type="radio" name="Question2" id="rate2-4"value="Rate 4">
+          <label for="rate2-4" class="fas fa-star"></label>
+          <input type="radio" name="Question2" id="rate2-3"value="Rate 3">
+          <label for="rate2-3" class="fas fa-star"></label>
+          <input type="radio" name="Question2" id="rate2-2"value="Rate 2">
+          <label for="rate2-2" class="fas fa-star"></label>
+          <input type="radio" name="Question2" id="rate2-1"value="Rate 1">
+          <label for="rate2-1" class="fas fa-star"></label>
+        </div>
+      </div>
+
+
+      <h2>
+        3:How satisfied are you with the value of money of your purchase?
+      </h2>
+      <div class="container2">
+        <div class="star">
+          <input type="radio" name="Question3" id="rate3-5"value="Rate 5">
+          <label for="rate3-5" class="fas fa-star"></label>
+          <input type="radio" name="Question3" id="rate3-4"value="Rate 4">
+          <label for="rate3-4" class="fas fa-star"></label>
+          <input type="radio" name="Question3" id="rate3-3"value="Rate 3">
+          <label for="rate3-3" class="fas fa-star"></label>
+          <input type="radio" name="Question3" id="rate3-2"value="Rate 2">
+          <label for="rate3-2" class="fas fa-star"></label>
+          <input type="radio" name="Question3" id="rate3-1"value="Rate 1">
+          <label for="rate3-1" class="fas fa-star"></label>
+        </div>
+      </div>
+
+      <h2>
+        4:On the scale of 1-10 how would you recommend us to your friends and family?
+
+        <h2>
+          <div class="box">
+            <div class="rating">
+              <input type="radio" id="q4-10" name="Question4"value="Rate 10">
+              <label for="q4-10">10</label>
+              <input type="radio" id="q4-9" name="Question4"value="Rate 19">
+              <label for="q4-9">9</label>
+              <input type="radio" id="q4-8" name="Question4"value="Rate 8">
+              <label for="q4-8">8</label>
+              <input type="radio" id="q4-7" name="Question4"value="Rate 7">
+              <label for="q4-7">7</label>
+              <input type="radio" id="q4-6" name="Question4"value="Rate 6">
+              <label for="q4-6">6</label>
+              <input type="radio" id="q4-5" name="Question4"value="Rate 5">
+              <label for="q4-5">5</label>
+              <input type="radio" id="q4-4" name="Question4"value="Rate 4">
+              <label for="q4-4">4</label>
+              <input type="radio" id="q4-3" name="Question4"value="Rate 3">
+              <label for="q4-3">3</label>
+              <input type="radio" id="q4-2" name="Question4"value="Rate 2">
+              <label for="q4-2">2</label>
+              <input type="radio" id="q4-1" name="Question4"value="Rate 1">
+              <label for="q4-1">1</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <textarea id="comments" class="input-textarea form-control" name="comment"
+              placeholder="Enter your comment here..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById("surveyForm").reset().addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      // Get the selected values
+      var question1 = document.querySelector('input[name="question1"]:checked').value;
+      var question2 = document.querySelector('input[name="question2"]:checked').value;
+      var question3 = document.querySelector('input[name="question3"]:checked').value;
+
+    });
+    </script>
+
+</body>
+
+</html>
