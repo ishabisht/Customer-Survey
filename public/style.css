@@ -177,7 +177,7 @@ form {
   margin: 30px;
 }
 .rating {
-  position: relative;
+  position: static;
   display: flex;
   flex-direction: row-reverse;
   margin-top: 10px;
