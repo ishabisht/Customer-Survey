@@ -175,11 +175,10 @@ form {
   width:450px;
   padding: 8px 50px;
   margin: 30px;
-  
+  position: left 20px;
 }
 .rating {
   position: relative;
-  left: 20px;
   display: flex;
   flex-direction: row-reverse;
   margin-top: 10px;
